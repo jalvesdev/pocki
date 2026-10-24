@@ -45,3 +45,8 @@ Pocki é um bichinho virtual de navegador com universo original de criaturas, cu
 - Pesos/limiares da personalidade, do vínculo e da longevidade.
 - Duração de cada fase e equilíbrio da mortalidade.
 - Se haverá registro de vidas passadas; DEC-015 A não exige álbum.
+
+## DEC-021 e DEC-022 — aprovadas em 24/10/2026
+- **DEC-021 B:** saves v1 adultos com `adultForm: 'sun' | 'moon'` serão convertidos em espécies novas **somente na Fase 2**, após definição do catálogo e do mapeamento. A Fase 1 preserva integralmente a aparência e o campo `adultForm`, sem conversão visual.
+- **DEC-022 B:** schema v2 mínimo e extensível. Adicionar apenas versão e identificação de origem/legado estritamente necessárias, preservando os campos v1. Não criar antecipadamente `speciesId`, `personality`, `bond`, `scene` ou históricos não definidos.
+- A Fase 1 não muda jogabilidade, arte, evolução, minijogos, mortalidade nem publicação.
