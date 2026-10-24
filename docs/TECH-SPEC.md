@@ -40,7 +40,7 @@ Os nomes, faixas e defaults são sugestões. Definir invariantes antes de codifi
 1. Ler `pocki-save` sem sobrescrever o conteúdo original antes de validar/migrar.
 2. Migrar v1 válida preservando timestamps, estágio, necessidades, saúde, erros de cuidado e demais campos relevantes.
 3. Atribuir defaults neutros aos novos campos; não inventar histórico de vínculo ou de personalidade anterior.
-4. Para adultos v1 com `adultForm` `sun`/`moon`, definir política explícita: manter aparência legada até nova partida **ou** mapear com consentimento/documentação. Não trocar criatura adulta silenciosamente.
+4. Para adultos v1 com `adultForm` `sun`/`moon`, preservar a aparência e o campo na Fase 1. A DEC-021 B autoriza conversão para novas espécies apenas na Fase 2, após definir o mapeamento; não trocar criatura adulta na Fase 1.
 5. Garantir que migração repetida seja idempotente e não altere o estado após primeira execução.
 6. Se save estiver inválido ou em versão futura, apresentar recuperação sem apagar automaticamente.
 7. Adicionar testes de v1 ovo/bebê/criança/adolescente/adulto/morto, além de dados corrompidos.
@@ -61,3 +61,8 @@ Os nomes, faixas e defaults são sugestões. Definir invariantes antes de codifi
 - Testes unitários para regras puras e regressões para save, evolução, morte, limites de status e time travel.
 - Verificar acessibilidade básica, performance em celular e ausência de erros de console.
 - Sem deploy ou commit automático sem pedido explícito.
+
+## DEC-021 e DEC-022 — aprovadas em 24/10/2026
+- **DEC-021 B:** saves v1 adultos com `adultForm: 'sun' | 'moon'` serão convertidos em espécies novas **somente na Fase 2**, após definição do catálogo e do mapeamento. A Fase 1 preserva integralmente a aparência e o campo `adultForm`, sem conversão visual.
+- **DEC-022 B:** schema v2 mínimo e extensível. Adicionar apenas versão e identificação de origem/legado estritamente necessárias, preservando os campos v1. Não criar antecipadamente `speciesId`, `personality`, `bond`, `scene` ou históricos não definidos.
+- A Fase 1 não muda jogabilidade, arte, evolução, minijogos, mortalidade nem publicação.
