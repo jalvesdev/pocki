@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#17271f">
+  <meta name="description" content="Pocki, um bichinho virtual retrô para cuidar no seu navegador.">
+  <title>Pocki — bichinho virtual</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="src/main.js"></script>
+</head>
+<body>
+  <main class="page">
+    <header><div class="brand-mark" aria-hidden="true">p</div><div><p class="eyebrow">SEU COMPANHEIRO DIGITAL</p><h1>Pocki</h1></div><button class="sound" id="sound" aria-label="Ativar sons" title="Ativar sons">♪ <span>Som desligado</span></button></header>
+    <section class="keychain" aria-label="Console Pocki">
+      <div class="chain-hole" aria-hidden="true"></div>
+      <div class="console">
+        <div class="console-top"><span>POCKI <i>•</i> PET DEVICE</span><span class="power"><b></b> ON</span></div>
+        <div class="screen-frame"><div class="lcd" id="lcd" aria-live="polite">
+          <div class="lcd-top"><span id="clock">--:--</span><span id="stage-label">OVO</span><span id="alert" aria-label="Sem alertas">♡</span></div>
+          <div class="pet-scene" id="pet-scene"><div class="pet" id="pet" role="img" aria-label="Ovo Pocki"><span class="pet-face">· ·</span></div><div class="sleep-z" id="sleep-z" aria-hidden="true"></div></div>
+          <div class="menu" id="menu" aria-label="Ações"><div class="menu-row" id="menu-row"></div></div>
+          <div class="lcd-message" id="message" aria-live="polite">Um novo amigo está a caminho.</div>
+          <div class="stats" id="stats" aria-label="Status do Pocki"></div>
+        </div></div>
+        <div class="console-bottom"><span>SELECT</span><span>ENTER</span><span>BACK</span></div>
+      </div>
+      <div class="buttons" role="group" aria-label="Controles">
+        <button class="control control-a" data-key="a" aria-label="Botão A, próximo">A</button>
+        <button class="control control-b" data-key="b" aria-label="Botão B, selecionar">B</button>
+        <button class="control control-c" data-key="c" aria-label="Botão C, voltar">C</button>
+      </div>
+      <div class="device-label">POCKI <span>VIRTUAL PET</span></div>
+    </section>
+    <p class="instructions">Use <kbd>A</kbd> para navegar, <kbd>B</kbd> para escolher e <kbd>C</kbd> para voltar.</p>
+    <div class="storage-warning" id="storage-warning" role="alert" hidden><p>O save local está corrompido. Ele não foi substituído.</p><button id="reset-corrupt">Confirmar reinício</button></div>
+    <footer>Um pequeno mundo, no seu tempo. <span>Salvo neste navegador.</span></footer>
+  </main>
+</body>
+</html>
